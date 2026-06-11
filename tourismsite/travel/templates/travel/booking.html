@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Your Tour</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/destinations/">Destinations</a>
+    <a href="/packages/">Packages</a>
+    <a href="/gallery/">Gallery</a>
+    <a href="/contact/">Contact</a>
+</nav>
+
+<div class="container">
+
+    <h1>Book Your Tour</h1>
+
+    {% if success %}
+<div style="
+background:#28a745;
+color:white;
+padding:12px;
+border-radius:5px;
+margin-bottom:15px;
+text-align:center;
+font-weight:bold;">
+    Booking Submitted Successfully!
+</div>
+{% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+
+        <label>Phone Number</label>
+        <input type="text" name="phone" placeholder="Enter your phone number" required>
+
+        <label>Select Destination</label>
+        <select name="destination" required>
+            <option value="">Choose Destination</option>
+            <option value="Munnar">Munnar</option>
+            <option value="Wayanad">Wayanad</option>
+            <option value="Alleppey">Alleppey</option>
+            <option value="Kovalam">Kovalam</option>
+        </select>
+
+        <label>Travel Date</label>
+        <input type="date" name="travel_date" required>
+
+        <button type="submit" class="btn">Book Now</button>
+
+    </form>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Kerala Trails Tourism. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+
+      

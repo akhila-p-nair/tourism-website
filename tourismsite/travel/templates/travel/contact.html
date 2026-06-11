@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/destinations/">Destinations</a>
+    <a href="/packages/">Packages</a>
+    <a href="/gallery/">Gallery</a>
+    <a href="/booking/">Booking</a>
+</nav>
+
+<div class="container">
+
+    <h1>Contact Us</h1>
+
+    {% if success %}
+    <div style="background:green;color:white;padding:10px;border-radius:5px;margin-bottom:20px;">
+        Message Sent Successfully!
+    </div>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Subject</label>
+        <input type="text" name="subject" required>
+
+        <label>Message</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+
+    </form>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Kerala Trails Tourism. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

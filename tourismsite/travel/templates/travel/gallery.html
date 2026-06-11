@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery - Kerala Trails Tourism</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/destinations/">Destinations</a>
+    <a href="/packages/">Packages</a>
+    <a href="/gallery/">Gallery</a>
+    <a href="/booking/">Booking</a>
+    <a href="/contact/">Contact</a>
+</nav>
+
+<div class="container">
+
+    <h1>Travel Gallery</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="{% static 'images/munnar.jpg' %}" alt="Munnar">
+            <h3>Munnar Tea Gardens</h3>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'images/wayanad.jpg' %}" alt="Wayanad">
+            <h3>Wayanad Hills</h3>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'images/alleppey.jpg' %}" alt="Alleppey">
+            <h3>Alleppey Backwaters</h3>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'images/kovalam.webp' %}" alt="Kovalam">
+            <h3>Kovalam Beach</h3>
+        </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/booking/" class="btn">Plan Your Trip</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Kerala Trails Tourism. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

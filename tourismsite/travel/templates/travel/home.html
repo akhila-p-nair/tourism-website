@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kerala Trails Tourism</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/destinations/">Destinations</a>
+    <a href="/packages/">Packages</a>
+    <a href="/gallery/">Gallery</a>
+    <a href="/booking/">Booking</a>
+    <a href="/contact/">Contact</a>
+</nav>
+
+<div class="hero">
+    <h1>Welcome to Kerala Trails Tourism</h1>
+    <p>Explore God's Own Country with unforgettable travel experiences.</p>
+    <br>
+    <a href="/booking/" class="btn">Book Your Trip</a>
+</div>
+
+<div class="container">
+
+    <h1>Why Choose Us?</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Affordable Packages</h3>
+            <p>Budget-friendly tours for everyone.</p>
+        </div>
+
+        <div class="card">
+            <h3>Comfortable Stay</h3>
+            <p>Quality hotels and transportation.</p>
+        </div>
+
+        <div class="card">
+            <h3>Expert Guides</h3>
+            <p>Experienced travel guides for your journey.</p>
+        </div>
+
+        <div class="card">
+            <h3>24/7 Support</h3>
+            <p>Customer support whenever you need help.</p>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <h1>Featured Destinations</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="{% static 'images/munnar.jpg' %}" alt="Munnar">
+            <h3>Munnar</h3>
+            <p>Tea plantations and misty hills.</p>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'images/wayanad.jpg' %}" alt="Wayanad">
+            <h3>Wayanad</h3>
+            <p>Adventure, forests and waterfalls.</p>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'images/alleppey-backwater.jpg' %}" alt="Alleppey">
+            <h3>Alleppey</h3>
+            <p>Famous backwaters and houseboats.</p>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'images/kovalam.webp' %}" alt="Kovalam">
+            <h3>Kovalam</h3>
+            <p>Beautiful beaches and sunsets.</p>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div style="text-align:center;">
+        <a href="/destinations/" class="btn">Explore Destinations</a>
+        <a href="/packages/" class="btn">View Packages</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Kerala Trails Tourism. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
