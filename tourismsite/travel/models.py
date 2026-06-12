@@ -6,6 +6,7 @@ class Booking(models.Model):
     phone = models.CharField(max_length=15)
     destination = models.CharField(max_length=100)
     travel_date = models.DateField()
+    status =models.CharField(max_length=20,default='Booked')
 
     def __str__(self):
         return self.name

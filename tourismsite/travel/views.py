@@ -43,9 +43,17 @@ def contact(request):
             subject=request.POST.get('subject'),
             message=request.POST.get('message')
         )
+
         return render(request, 'travel/contact.html', {'success': True})
 
     return render(request, 'travel/contact.html')
+
+def cancel_booking(request,booking_id):
+        booking= Booking.objects.get(id=booking_id)
+        booking.status="Cancelled"
+        booking.save()
+
+        return render(request,'travel/cancel_success.html')
 
 
 
